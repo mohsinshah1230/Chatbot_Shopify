@@ -28,7 +28,7 @@ load_dotenv()
 
 
 # Set OpenAI API key
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = OPENAI_API_KEY
 
 # Define the database and table for Shopify products
 engine = create_engine("sqlite:///shopify_products.db")
@@ -122,7 +122,7 @@ def get_latest_product_id(engine, table):
 # Initialize database with latest products if there are new ones
 SHOP_HANDLE = 'Lemmon-24april'
 API_VERSION = '2024-04'
-TOKEN = os.getenv("SHOPIFY_API_KEY")
+TOKEN =SHOPIFY_API_KEY
 
 update_products_in_db(SHOP_HANDLE, API_VERSION, TOKEN, engine, shopify_products_table)
 
