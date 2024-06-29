@@ -22,6 +22,9 @@ from langchain_core.prompts.chat import (
 )
 from langchain.agents import create_openai_tools_agent
 from langchain.agents.agent import AgentExecutor
+from dotenv import load_dotenv
+
+load_dotenv()
 
 OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
 # Define the database and tables for Shopify products and orders
